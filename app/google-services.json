@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "873862292766",
+    "project_id": "inochatdatabase",
+    "storage_bucket": "inochatdatabase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:873862292766:android:6a9e2acb4efa26c42c950f",
+        "android_client_info": {
+          "package_name": "com.therzarzayev.inochat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "873862292766-h8oo73m3rd7vuc3votbipaauujlvo1pf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACCd2DUy6R4dlzOENdsJjgk4FAd-usZf8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "873862292766-h8oo73m3rd7vuc3votbipaauujlvo1pf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:873862292766:android:af881b24d2d614e52c950f",
+        "android_client_info": {
+          "package_name": "com.trtrh.rtrbr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "873862292766-h8oo73m3rd7vuc3votbipaauujlvo1pf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACCd2DUy6R4dlzOENdsJjgk4FAd-usZf8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "873862292766-h8oo73m3rd7vuc3votbipaauujlvo1pf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
