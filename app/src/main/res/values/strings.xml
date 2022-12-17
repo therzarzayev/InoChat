@@ -15,5 +15,6 @@
     <string name="email">Email</string>
     <string name="register">Register</string>
     <string name="full_name">Full name</string>
-    <string name="term_policy">By signing up, you agree to our Terms , Privacy Policy and Cookies Policy .</string>
+    <string name="term_policy">I accept Terms and Privacy Policy</string>
+    <string name="logout">Logout</string>
 </resources>
