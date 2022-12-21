@@ -1,7 +1,5 @@
 <resources>
-    <string name="app_name">InoChat</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">FoodChat</string>
     <string name="home">Home</string>
     <string name="search">Search</string>
     <string name="like">Like</string>
@@ -17,4 +15,10 @@
     <string name="full_name">Full name</string>
     <string name="term_policy">I accept Terms and Privacy Policy</string>
     <string name="logout">Logout</string>
+    <string name="username">Username</string>
+    <string name="post">Post</string>
+    <string name="user_image">User image</string>
+    <string name="comment">Comment</string>
+    <string name="add_comment">Add comment...</string>
+    <string name="share">Share</string>
 </resources>
