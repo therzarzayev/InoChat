@@ -9,12 +9,14 @@ import com.google.firebase.Timestamp
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.therzarzayev.inochat.R
+import com.therzarzayev.inochat.adapter.PostAdapter
 import com.therzarzayev.inochat.databinding.FragmentHomeBinding
 import com.therzarzayev.inochat.models.PostModel
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var posts: ArrayList<PostModel>
+    private lateinit var adapter: PostAdapter
     private val db = Firebase.firestore
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,6 +51,8 @@ class HomeFragment : Fragment() {
                         )
                         posts.add(post)
                     }
+                    adapter = PostAdapter(posts)
+                    binding.rvPosts.adapter = adapter
                 }
             }
         }

@@ -9,14 +9,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.therzarzayev.inochat.R
 import com.therzarzayev.inochat.databinding.PostCardItemBinding
 import com.therzarzayev.inochat.models.PostModel
+import com.therzarzayev.inochat.utils.GlideObj.getPostImg
 
 class PostAdapter(private val posts: ArrayList<PostModel>) :
     RecyclerView.Adapter<PostAdapter.CardViewHolder>() {
     class CardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val user: TextView
+        val date: TextView
         val postImg: ImageView
+
         init {
             user = itemView.findViewById(R.id.c_username)
+            date = itemView.findViewById(R.id.date_text)
             postImg = itemView.findViewById(R.id.postImage)
         }
     }
@@ -31,7 +35,8 @@ class PostAdapter(private val posts: ArrayList<PostModel>) :
     override fun onBindViewHolder(holder: CardViewHolder, position: Int) {
         val post = posts[position]
         holder.user.text = post.user
-        holder.postImg.setImageDrawable()
+        holder.date.text = post.date.toString()
+        getPostImg(holder.itemView.context, post.downloadUrl, holder.postImg)
 
     }
 
