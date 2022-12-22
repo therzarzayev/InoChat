@@ -10,6 +10,7 @@ object GlideObj {
         Glide
             .with(context)
             .load(url)
+            .placeholder(R.drawable.defult)
             .into(image)
     }
 }
