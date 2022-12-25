@@ -20,15 +20,19 @@
         app:title="therzarzayev"
         app:titleTextColor="@color/black" />
 
-    <Button
-        android:id="@+id/logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/logout"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/c_profileImage"
+        android:layout_width="180px"
+        android:layout_height="180px"
+        android:layout_marginTop="41dp"
+        android:contentDescription="@string/user_image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_profil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
-        app:layout_constraintVertical_bias="0.5" />
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+        tools:targetApi="s" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

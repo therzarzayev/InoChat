@@ -35,15 +35,18 @@ class MainActivity : AppCompatActivity() {
             when (it.itemId) {
                 R.id.home -> replaceFragment(HomeFragment())
                 R.id.search -> replaceFragment(SearchFragment())
-                R.id.like -> replaceFragment(LikeFragment())
+                R.id.add -> addPost()
+                R.id.like -> {
+                    replaceFragment(LikeFragment())
+
+                }
                 R.id.person -> replaceFragment(ProfileFragment())
                 else -> Log.INFO
             }
             true
         }
-        binding.fabButton.setOnClickListener {
-            addPost()
-        }
+
+
     }
 
     private fun replaceFragment(fragment: Fragment) {

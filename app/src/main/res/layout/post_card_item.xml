@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="1dp">
+    android:layout_marginBottom="1dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,26 +18,25 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/c_profileImage"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_margin="5dp"
-                android:background="@drawable/img_bg"
-                android:clipToOutline="true"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_margin="10dp"
                 android:contentDescription="@string/user_image"
                 android:scaleType="centerCrop"
                 android:src="@drawable/default_profil"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
                 tools:targetApi="s" />
 
             <TextView
                 android:id="@+id/c_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="10dp"
                 android:text="@string/username"
                 android:textColor="@color/black_90"
                 android:textSize="14sp"
@@ -59,20 +58,20 @@
 
             <ImageView
                 android:id="@+id/c_like_btn"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_marginVertical="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:contentDescription="@string/like"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_favorite" />
+                app:srcCompat="@drawable/heart_red" />
 
             <ImageView
                 android:id="@+id/c_comment_btn"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_marginVertical="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
@@ -81,7 +80,37 @@
                 app:layout_constraintStart_toEndOf="@+id/c_like_btn"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/ic_comment" />
+                app:srcCompat="@drawable/comment" />
+
+            <ImageView
+                android:id="@+id/c_share_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginVertical="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/comment"
+                app:layout_constraintBottom_toBottomOf="@+id/c_comment_btn"
+                app:layout_constraintStart_toEndOf="@+id/c_comment_btn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/send" />
+
+            <ImageView
+                android:id="@+id/c_save_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginVertical="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/comment"
+                app:layout_constraintBottom_toBottomOf="@+id/c_comment_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/c_comment_btn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/save" />
 
             <TextView
                 android:id="@+id/textView"
@@ -117,10 +146,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:contentDescription="@string/post"
+            android:minHeight="409dp"
+            android:scaleType="centerCrop"
             app:layout_constraintBottom_toTopOf="@+id/bottomLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/c_topLayout"
             tools:srcCompat="@tools:sample/avatars" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/bottomLayout"
+            app:layout_constraintEnd_toEndOf="@+id/postImage"
+            app:layout_constraintStart_toStartOf="@+id/postImage"
+            app:layout_constraintTop_toBottomOf="@+id/c_topLayout" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
