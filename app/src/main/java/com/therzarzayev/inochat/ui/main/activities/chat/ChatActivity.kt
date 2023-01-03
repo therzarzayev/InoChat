@@ -1,4 +1,4 @@
-package com.therzarzayev.inochat.ui.main
+package com.therzarzayev.inochat.ui.main.activities.chat
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

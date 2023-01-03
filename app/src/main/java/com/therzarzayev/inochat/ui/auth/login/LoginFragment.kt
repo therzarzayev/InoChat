@@ -1,26 +1,26 @@
-package com.therzarzayev.inochat.ui.auth
+package com.therzarzayev.inochat.ui.auth.login
 
 
-import android.content.Context
 import android.content.Context.INPUT_METHOD_SERVICE
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import android.widget.LinearLayout
-import android.widget.ProgressBar
 import android.widget.Toast
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.google.firebase.auth.FirebaseAuth
 import com.therzarzayev.inochat.R
 import com.therzarzayev.inochat.databinding.FragmentLoginBinding
-import com.therzarzayev.inochat.ui.main.MainActivity
+import com.therzarzayev.inochat.ui.auth.register.RegisterFragment
+import com.therzarzayev.inochat.ui.auth.reset.ResetPasswordFragment
+import com.therzarzayev.inochat.ui.main.activities.main.MainActivity
 
 class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
@@ -39,14 +39,25 @@ class LoginFragment : Fragment() {
         }
         binding.buttonLogin.setOnClickListener {
             hideKeyboard()
-            binding.loginLay.visibility = View.INVISIBLE
-            binding.progressRel.visibility = View.VISIBLE
             login()
         }
         binding.buttonSignup.setOnClickListener {
             replaceFragment(RegisterFragment())
         }
+        binding.titleForgetPasswd.setOnClickListener{
+            replaceFragment(ResetPasswordFragment())
+        }
+        binding.hidePassword.setOnClickListener {
+            binding.passwd.transformationMethod = HideReturnsTransformationMethod.getInstance()
+            binding.showPassword.visibility = View.VISIBLE
+            binding.hidePassword.visibility = View.GONE
+        }
 
+        binding.showPassword.setOnClickListener {
+            binding.passwd.transformationMethod = PasswordTransformationMethod.getInstance()
+            binding.hidePassword.visibility = View.VISIBLE
+            binding.showPassword.visibility = View.GONE
+        }
 
         return binding.root
     }
@@ -63,15 +74,17 @@ class LoginFragment : Fragment() {
         val email = binding.email.text.toString().trim()
         val password = binding.passwd.text.toString().trim()
         if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
+            binding.loginLay.visibility = View.GONE
+            binding.progressRel.visibility = View.VISIBLE
             auth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
-                    if (it.isSuccessful) {
-                        val intent = Intent(context, MainActivity::class.java)
-                        startActivity(intent)
-                        requireActivity().finish()
-                    }
-                }.addOnFailureListener {
-                    Toast.makeText(context, it.localizedMessage, Toast.LENGTH_SHORT).show()
+                if (it.isSuccessful) {
+                    val intent = Intent(context, MainActivity::class.java)
+                    startActivity(intent)
+                    requireActivity().finish()
                 }
+            }.addOnFailureListener {
+                Toast.makeText(context, it.localizedMessage, Toast.LENGTH_SHORT).show()
+            }
         } else {
             Toast.makeText(context, "Email or password is incorrect", Toast.LENGTH_SHORT).show()
         }
@@ -82,7 +95,7 @@ class LoginFragment : Fragment() {
         _binding = null
     }
 
-    fun hideKeyboard() {
+    private fun hideKeyboard() {
         val imm = requireActivity().getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view?.windowToken, 0)
     }

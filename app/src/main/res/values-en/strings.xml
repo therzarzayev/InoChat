@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FoodChat</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="like">Favourite</string>
+    <string name="profile">Account</string>
+    <string name="chats">Messages</string>
+    <string name="forget_password">Forget password?</string>
+    <string name="sign_up">Register</string>
+    <string name="login">Log in</string>
+    <string name="remember_me">Remember me</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+
+    <string name="full_name">Full name</string>
+    <string name="logout">Logout</string>
+    <string name="username">Username</string>
+    <string name="post">Post</string>
+    <string name="user_image">User photo</string>
+    <string name="comment">Comment</string>
+    <string name="add_comment">Write comment…</string>
+    <string name="share">Share</string>
+    <string name="add">Add</string>
+    <string name="user_name">Username</string>
+
+    <string name="register">REGISTER</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="welcome">Welcome</string>
+    <string name="send_link">Send link</string>
+    <string name="reset_password">Reset password</string>
+</resources>

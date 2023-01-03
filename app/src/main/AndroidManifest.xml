@@ -20,21 +20,21 @@
         android:theme="@style/Theme.InoChat"
         tools:targetApi="31">
         <activity
-            android:name=".ui.main.ChatActivity"
+            android:name=".ui.main.activities.chat.ChatActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.main.ShareActivity"
+            android:name=".ui.main.activities.share.ShareActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.main.MainActivity"
+            android:name=".ui.main.activities.main.MainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

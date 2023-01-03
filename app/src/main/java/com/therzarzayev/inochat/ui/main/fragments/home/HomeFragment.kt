@@ -1,4 +1,4 @@
-package com.therzarzayev.inochat.ui.main
+package com.therzarzayev.inochat.ui.main.fragments.home
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -11,10 +11,10 @@ import com.google.firebase.Timestamp
 import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.therzarzayev.inochat.R
 import com.therzarzayev.inochat.adapter.PostAdapter
 import com.therzarzayev.inochat.databinding.FragmentHomeBinding
 import com.therzarzayev.inochat.models.PostModel
+import com.therzarzayev.inochat.ui.main.activities.chat.ChatActivity
 
 
 class HomeFragment : Fragment() {
@@ -30,7 +30,7 @@ class HomeFragment : Fragment() {
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         binding.materialToolbarChat.setOnClickListener{
-            startActivity(Intent(activity,ChatActivity::class.java))
+            startActivity(Intent(activity, ChatActivity::class.java))
         }
 
         posts = arrayListOf()

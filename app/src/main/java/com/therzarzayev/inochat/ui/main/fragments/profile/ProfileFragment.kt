@@ -1,4 +1,4 @@
-package com.therzarzayev.inochat.ui.main
+package com.therzarzayev.inochat.ui.main.fragments.profile
 
 import android.content.Intent
 import android.os.Bundle

@@ -6,14 +6,13 @@
     <string name="profile">Profil</string>
     <string name="chats">Mesajlar</string>
     <string name="forget_password">Şifrənizi unutmusunuz?</string>
-    <string name="sign_up">Qeydiyyatdan keç</string>
+    <string name="sign_up">Qeydiyyat</string>
     <string name="login">Giriş et</string>
     <string name="remember_me">Məni xatırla</string>
     <string name="password">Parol</string>
     <string name="email">Email</string>
-    <string name="register">Qeydiyyatdan keç</string>
+
     <string name="full_name">Tam adınız</string>
-    <string name="term_policy">Gizlilik siyasətini qəbul edirəm</string>
     <string name="logout">Çıxış et</string>
     <string name="username">İstifadəçi adı</string>
     <string name="post">Post</string>
@@ -22,4 +21,12 @@
     <string name="add_comment">Koment yaz…</string>
     <string name="share">Paylaş</string>
     <string name="add">Əlavə et</string>
+    <string name="user_name">İstifadəçi adı</string>
+
+    <string name="register">REGISTER</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="welcome">Xoş gəldiniz</string>
+    <string name="send_link">Link göndər</string>
+    <string name="reset_password">Şifrənin bərpası</string>
 </resources>

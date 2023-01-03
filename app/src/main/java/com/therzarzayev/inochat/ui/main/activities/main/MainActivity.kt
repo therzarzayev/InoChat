@@ -1,19 +1,10 @@
-package com.therzarzayev.inochat.ui.main
+package com.therzarzayev.inochat.ui.main.activities.main
 
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.Bitmap
-import android.graphics.Color
-import android.graphics.ImageDecoder
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
 import android.util.Log
-import android.view.Menu
-import android.view.MenuInflater
-import androidx.activity.result.ActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -21,6 +12,11 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.therzarzayev.inochat.R
 import com.therzarzayev.inochat.databinding.ActivityMainBinding
+import com.therzarzayev.inochat.ui.main.activities.share.ShareActivity
+import com.therzarzayev.inochat.ui.main.fragments.home.HomeFragment
+import com.therzarzayev.inochat.ui.main.fragments.like.LikeFragment
+import com.therzarzayev.inochat.ui.main.fragments.profile.ProfileFragment
+import com.therzarzayev.inochat.ui.main.fragments.search.SearchFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

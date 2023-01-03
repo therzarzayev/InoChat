@@ -13,11 +13,11 @@ import com.bumptech.glide.request.target.Target
 import com.therzarzayev.inochat.R
 
 object GlideObj {
-    fun getPostImg(context: Context, url: String, image: ImageView, progressBar: ProgressBar){
+    fun getPostImg(context: Context, url: String, image: ImageView, progressBar: ProgressBar) {
         Glide
             .with(context)
             .load(url)
-            .listener(object : RequestListener<Drawable>{
+            .listener(object : RequestListener<Drawable> {
                 override fun onLoadFailed(
                     e: GlideException?,
                     model: Any?,

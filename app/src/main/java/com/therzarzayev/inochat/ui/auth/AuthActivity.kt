@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.therzarzayev.inochat.R
 import com.therzarzayev.inochat.databinding.ActivityAuthBinding
+import com.therzarzayev.inochat.ui.auth.login.LoginFragment
 
 class AuthActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAuthBinding
